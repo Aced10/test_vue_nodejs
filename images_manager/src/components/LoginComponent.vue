@@ -28,7 +28,7 @@
               <v-card-actions>
                 <div class="flex-grow-2"></div>
                 <v-btn color="primary">Login Facebook</v-btn>
-                <div class="flex-grow-1"></div>
+                <div class="flex-grow-1 "></div>
                 <v-btn color="error">Login Gmail</v-btn>
               </v-card-actions>
             </v-card>
