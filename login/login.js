@@ -3,11 +3,14 @@ const router = require('express-promise-router')();
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const passportConf = require('./config/passport');
+const LoginController = require('./controllers/login');
+
+const passportGoogle = passport.authenticate('googleToken', {session: false });
 const app = express();
 
 app.use(bodyParser.json());
 
-router.route('/google').post(passport.authenticate('googleToken', {session: false }));
+router.route('/google').post(passportGoogle, LoginController.googleOAuth);
 
 app.use('/login', router);
 
